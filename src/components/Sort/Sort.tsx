@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {setSort} from "../../redux/filter/slice";
 import {SortPropertiesType} from "../../redux/filter/types";
 import {RootState} from "../../redux/store";
+import useOnClickOutside from "../../utils/useOnClickOutside";
 
 const properties = [
     {name: 'popularity (↑)', type: 'rating', order: 'asc'},
@@ -36,21 +37,7 @@ export function Sort() {
         setIsVisible(false)
     }
 
-
-    // useEffect(() => {
-    //     const handleOutsideClick = (e: MouseEvent) => {
-    //         const _e = e as PopupClick;
-    //         console.log(_e)
-    //         if (sortRef.current && !_e.path.includes(sortRef.current)) {
-    //             setIsVisible(false);
-    //         }
-    //     }
-    //
-    //     document.body.addEventListener('click', handleOutsideClick);
-    //     return () => {
-    //         document.body.removeEventListener('click', handleOutsideClick);
-    //     };
-    // }, []);
+    useOnClickOutside(sortRef, () => setIsVisible(false))
 
     return (
         <div ref={sortRef} className={s.sort}>

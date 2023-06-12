@@ -1,14 +1,11 @@
 Sort styles ***
-pizzas grid
-Header search
-colors black category sort
 fix button height
 fix cart font sizes and overall
-fix cartItem & cart page @media
 make privacy policy
 search header @media make adaptive
 
 social links ?
 redux set totalCount  totalPrice ?
+fix hover card
 
 

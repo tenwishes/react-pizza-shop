@@ -12,7 +12,7 @@ export function Search() {
     const searchDebounce = useCallback(
         debounce((value: string) => {
             dispatch(setSearchValue(value))
-        }, 300), [],
+        }, 400), [],
     )
 
     const onClickClear = () => {

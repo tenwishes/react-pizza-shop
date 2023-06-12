@@ -18,7 +18,7 @@ export function Header() {
                         <h1>house pizza</h1>
                     </div>
                 </Link>
-                {location.pathname !== '/cart' && <Search/>}
+                {location.pathname === '/' && <Search/>}
                 {location.pathname !== '/cart' && (
                     <Link to="/cart">
                         <button className={s.cart}>
